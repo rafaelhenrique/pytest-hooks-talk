@@ -1,2 +1,2 @@
-# pytest_hooks_talk
+# pytest-hooks-talk
 My talk about pytest hooks
