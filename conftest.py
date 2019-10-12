@@ -1,11 +1,12 @@
-# import pytest
+import pytest
 
 
 def pytest_runtest_setup(item):
     print(f"called before {item}")
 
-    # if not item.name.startswith('test_'):
-    #     pytest.fail(f"Incorrect name of test {item.name}", pytrace=False)
+    # check incorrect prefix name on tests
+    if not item.name.startswith('test_'):
+        pytest.fail(f"Incorrect name of test {item.name}", pytrace=False)
 
 
 def pytest_runtest_call(item):
